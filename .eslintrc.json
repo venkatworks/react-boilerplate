@@ -12,6 +12,9 @@
       "version": "16.6.1"
     }
   },
+  "rules": {
+    "flowtype/require-valid-file-annotation": [2, "always"]
+  },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -24,5 +27,5 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "jsx-a11y"]
+  "plugins": ["react", "jsx-a11y", "flowtype"]
 }
