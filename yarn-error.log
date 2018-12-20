@@ -1,0 +1,106 @@
+Arguments: 
+  /usr/local/Cellar/node/9.11.1/bin/node /usr/local/Cellar/yarn/1.6.0/libexec/bin/yarn.js install
+
+PATH: 
+  /usr/bin:/usr/sbin:/bin:/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/opt/node@8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/Evernym/.cargo/bin:/Users/Evernym/Library/Android/sdk/tools/bin:/Users/Evernym/Library/Android/sdk/tools:/Users/Evernym/Library/Android/sdk/platform-tools:/Users/Evernym/.yarn/bin:/Users/Evernym/.config/yarn/global/node_modules/.bin:/Users/Evernym/.nvm/versions/node/v8.1.0/bin:/opt/local/bin:/opt/local/sbin:/usr/local/opt/node@8/bin
+
+Yarn version: 
+  1.6.0
+
+Node version: 
+  9.11.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/Evernym/Desktop/ex/yaswanth/react-boilerplate/package.json: Unexpected token } in JSON at position 2303
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.6.0/libexec/lib/cli.js:1130:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.6.0/libexec/lib/cli.js:98:30)
+      at /usr/local/Cellar/yarn/1.6.0/libexec/lib/cli.js:109:13
+      at <anonymous>
+
+npm manifest: 
+  {
+    "name": "react-boilerplate",
+    "version": "0.1.0",
+    "description": "React, Redux, Redux Saga, React-Router,Eslint, Jest, babel, ES6 Webpack Project",
+    "main": "index.js",
+    "scripts": {
+      "build": "webpack --config webpack.config.prod.js",
+      "dev": "webpack-dev-server --open --config webpack.config.dev.js",
+      "dev:hot": "npm run dev -- --hot",
+      "test": "jest",
+      "format": "pretty-quick",
+      "lint": "eslint ./"
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "pretty-quick --staged && npm run lint && npm run test"
+      }
+    },
+    "author": "",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/avanslaars/egghead-react-boilerplate.git"
+    },
+    "keywords": [],
+    "bugs": {
+      "url": "https://github.com/avanslaars/egghead-react-boilerplate/issues"
+    },
+    "homepage": "https://github.com/avanslaars/egghead-react-boilerplate#readme",
+    "devDependencies": {
+      "@babel/cli": "^7.1.5",
+      "@babel/core": "^7.1.5",
+      "@babel/plugin-proposal-class-properties": "^7.1.0",
+      "babel-plugin-transform-object-rest-spread": "^6.5.0",
+      "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+      "@babel/preset-env": "^7.1.5",
+      "@babel/preset-react": "^7.0.0",
+      "babel-core": "^7.0.0-bridge.0",
+      "babel-eslint": "^10.0.1",
+      "babel-jest": "^23.6.0",
+      "babel-loader": "^8.0.4",
+      "babel-plugin-dynamic-import-node": "^2.2.0",
+      "css-loader": "^1.0.1",
+      "eslint": "^5.9.0",
+      "eslint-plugin-jsx-a11y": "^6.1.2",
+      "eslint-plugin-react": "^7.11.1",
+      "html-webpack-plugin": "^3.2.0",
+      "husky": "^1.1.4",
+      "jest": "^23.6.0",
+      "jest-dom": "^2.1.1",
+      "prettier": "^1.15.2",
+      "pretty-quick": "^1.8.0",
+      "react-axe": "^3.0.2",
+      "react-testing-library": "^5.2.3",
+      "style-loader": "^0.23.1",
+      "webpack": "^4.25.1",
+      "webpack-bundle-analyzer": "^3.0.3",
+      "webpack-cli": "^3.1.2",
+      "webpack-dev-server": "^3.1.10",
+      "webpack-merge": "^4.1.4"
+    },
+    "dependencies": {
+      "@babel/polyfill": "^7.0.0",
+      "prop-types": "^15.6.2",
+      "react": "^16.6.1",
+      "react-dom": "^16.6.1",
+      "react-router": "4.3.1",
+      "react-hot-loader": "^4.3.12",
+      "react-redux": "^4.4.0",
+      "react-router-redux": "^3.0.0",
+      "redux": "^3.3.1",
+      "redux-logger": "^3.0.1",
+      "redux-saga": "0.16.0",
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

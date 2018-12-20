@@ -1,20 +1,20 @@
 {
   "presets": [
-    ["@babel/preset-env", {
-    "targets": [
-      "last 2 versions",
-      "not dead",
-      "not < 2%",
-      "not ie 11"
+    [
+      "@babel/preset-env",
+      {
+        "targets": ["last 2 versions", "not dead", "not < 2%", "not ie 11"],
+        "useBuiltIns": "entry"
+      }
     ],
-    "useBuiltIns": "entry"
-  }],
-  "@babel/preset-react"
+    "@babel/preset-react",
+    "flow"
   ],
   "plugins": [
     "react-hot-loader/babel",
     "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-syntax-dynamic-import"
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-transform-object-rest-spread"
   ],
   "env": {
     "test": {
