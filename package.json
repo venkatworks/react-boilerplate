@@ -9,11 +9,11 @@
     "dev:hot": "npm run dev -- --hot",
     "test": "jest",
     "format": "pretty-quick",
-    "lint": "eslint ./"
+    "lint": "glow"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && npm run lint && npm run test"
+      "pre-commit": "pretty-quick --single-quote --no-semi --trailing-comma --staged && npm run lint && npm run test"
     }
   },
   "author": "",
@@ -31,6 +31,7 @@
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.5",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "eslint-plugin-flowtype": "^2.47.1",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/preset-env": "^7.1.5",
     "@babel/preset-react": "^7.0.0",
@@ -46,7 +47,7 @@
     "eslint": "^5.9.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
-    "flow-bin": "^0.89.0",
+    "flow-bin": "0.57.3",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.1.4",
     "jest": "^23.6.0",
@@ -62,7 +63,10 @@
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10",
-    "webpack-merge": "^4.1.4"
+    "webpack-merge": "^4.1.4",
+    "flow-annotation-check": "^1.8.1",
+    "flow-typed": "2.3.0",
+    "glow": "^1.2.2"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",

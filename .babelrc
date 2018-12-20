@@ -7,8 +7,7 @@
         "useBuiltIns": "entry"
       }
     ],
-    "@babel/preset-react",
-    "flow"
+    "@babel/preset-react"
   ],
   "plugins": [
     "react-hot-loader/babel",
