@@ -10,15 +10,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         exclude: /node_modules/
       },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-        exclude: /node_modules/
-      },
+
       {
         test: /\.scss$/,
         use: [
@@ -27,7 +23,8 @@ module.exports = {
           'sass-loader' // compiles Sass to CSS, using Node Sass by default
         ]
       }
-    ]
+    ],
+    loaders: [{ exclude: ['node_modules'], loader: 'babel', test: /\.jsx?$/ }]
   },
   plugins: [
     new HtmlWebpackPlugin({

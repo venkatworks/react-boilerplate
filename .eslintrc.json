@@ -1,31 +1,14 @@
 {
   "parser": "babel-eslint",
-  "env": {
-    "browser": true,
-    "commonjs": true,
-    "es6": true,
-    "node": true,
-    "jest": true
-  },
-  "settings": {
-    "react": {
-      "version": "16.6.1"
-    }
-  },
+  "plugins": ["flowtype"],
   "rules": {
     "flowtype/require-valid-file-annotation": [2, "always"]
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended"
-  ],
   "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 2018,
-    "sourceType": "module"
-  },
-  "plugins": ["react", "jsx-a11y", "flowtype"]
+      "modules": true
+    }
+  }
 }

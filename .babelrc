@@ -11,9 +11,11 @@
   ],
   "plugins": [
     "react-hot-loader/babel",
+    "transform-flow-strip-types",
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-syntax-dynamic-import",
-    "transform-object-rest-spread"
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-object-rest-spread"
   ],
   "env": {
     "test": {
