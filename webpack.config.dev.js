@@ -6,5 +6,6 @@ module.exports = merge(baseConfig, {
   devServer: {
     port: 9000
   },
+  resolve: { alias: { sinon: 'sinon/pkg/sinon.js' } },
   devtool: 'source-map'
 })
