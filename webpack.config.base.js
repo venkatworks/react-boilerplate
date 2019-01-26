@@ -24,7 +24,7 @@ module.exports = {
         ]
       }
     ],
-    loaders: [{ exclude: ['node_modules'], loader: 'babel', test: /\.jsx?$/ }]
+   // loaders: [{ exclude: ['node_modules'], loader: 'babel', test: /\.jsx?$/ }]
   },
   plugins: [
     new HtmlWebpackPlugin({
