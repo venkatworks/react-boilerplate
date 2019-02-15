@@ -24,26 +24,16 @@ class DashboardPage extends React.Component {
   }
 
   render() {
-    if (this.props.data)
-      return (
-        <div>
-          {this.props.data.data.data1d.map((price, index) => (
-            <div>price:{price[1]}</div>
-          ))}
+    return (
+      <div>
+        <div className="layer1">
+          <div className="layer3" />
+          <div className="layer2">
+            <div className="layer3" />
+          </div>
         </div>
-      )
-    // <LineChart
-    //   data={[
-    //     [
-    //       this.props.data.data.data1d.map((price, index) => ({
-    //         x: index,
-    //         y: price[1],
-    //       })),
-    //     ],
-    //   ]}
-    // />
-    // )
-    else return <div>dashboard</div>
+      </div>
+    )
   }
 }
 export default connect(

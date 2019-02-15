@@ -1,0 +1,29 @@
+.inline,
+.block,
+.inline-block {
+  height: 10rem;
+  width: 10rem;
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: red;
+}
+.inline {
+  display: inline;
+  &.d2 {
+    border: 40px solid black;
+    margin: 50px;
+  }
+}
+.example-space {
+  margin-top: 10vh;
+  height: 50vh;
+  width: 100vw;
+}
+.inline-block {
+  display: inline-block;
+}
+.child-of-inline {
+  margin: 0px;
+  height: 2px;
+}

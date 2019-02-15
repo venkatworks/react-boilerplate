@@ -7,6 +7,10 @@ import { Provider } from 'react-redux'
 import { store } from './middleware'
 import LoginPage from './pages/login/index'
 import SignupPage from './pages/signup/index'
+import PositionPage from './pages/html-css/position/index'
+import BlockPage from './pages/html-css/block/index'
+import FlexPage from './pages/html-css/flex/index'
+import GridPage from './pages//html-css/grid/index'
 import DashboardPage from './pages/dashboard/index'
 import NotFoundPage from './pages/not-found/index'
 import { createBrowserHistory } from 'history'
@@ -23,10 +27,14 @@ class App extends React.Component {
       <Provider store={store}>
         <Router history={history}>
           <div>
-            <Route exact path="/" component={LoginPage} />
+            <Route exact path="/" component={BlockPage} />
             <Route path="/login" component={LoginPage} />
             <Route path="/signup" component={SignupPage} />
             <Route path="/dashboard" component={DashboardPage} />
+            <Route path="/position" component={PositionPage} />
+            <Route path="/block" component={BlockPage} />
+            <Route path="/flex" component={FlexPage} />
+            <Route path="/grid" component={GridPage} />
             <Route path="/index.html" component={LoginPage} />
           </div>
         </Router>
