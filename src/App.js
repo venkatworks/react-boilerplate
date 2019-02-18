@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { store } from './middleware'
 import LoginPage from './pages/login/index'
+import HocPage from './pages/hoc/index'
 import SignupPage from './pages/signup/index'
 import PositionPage from './pages/html-css/position/index'
 import BlockPage from './pages/html-css/block/index'
@@ -35,6 +36,7 @@ class App extends React.Component {
             <Route path="/block" component={BlockPage} />
             <Route path="/flex" component={FlexPage} />
             <Route path="/grid" component={GridPage} />
+            <Route path="/hoc" component={HocPage} />
             <Route path="/index.html" component={LoginPage} />
           </div>
         </Router>

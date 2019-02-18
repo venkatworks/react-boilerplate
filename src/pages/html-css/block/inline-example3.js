@@ -11,19 +11,18 @@ const ExpadingPaddingInlineBlockChild = styled.div(({ childHeight }) => {
   }
 })
 
-class InlineExample2 extends React.Component {
+class InlineExample3 extends React.Component {
   listener = null
   state = {
     childHeight: 1
   }
   componentDidUpdate() {
-    if (this.state.childHeight === 80) {
+    if (this.state.childHeight === 50) {
       this.setState({ childHeight: 1 })
     }
   }
   componentWillMount = () => {
     this.intervalHandler = setInterval(() => {
-      console.log(this.state.childHeight)
       this.setState({
         childHeight: this.state.childHeight + 1
       })
@@ -63,27 +62,15 @@ class InlineExample2 extends React.Component {
           <div className="inline d1">inline 1</div>
           <ExpadingPaddingInlineBlockChild
             childHeight={childHeight}
-            className="inline"
+            className="inline-block  child-of-inline"
           >
-            <b>expanding padded inline element</b>
+            <b>expanding padded inline-block element</b>
           </ExpadingPaddingInlineBlockChild>
           <div className="inline d1">inline 1</div>
           <ol>
             <li>
-              Observe how the padding of inline element is covering other top
-              inline elements
-            </li>
-            <li>
-              Observe how the padding of inline element overflowing the parent
-              element.
-            </li>
-            <li>
-              Observe how the 'padded element' content is aligning with the
-              other inline elements
-            </li>
-            <li>
-              Observe how the 'inline 1' element's content and padding is
-              covered with next line inline elements padding.
+              observe how the 'expanding padded inline-block element' content
+              text last line is aligned with other inline element text
             </li>
           </ol>
         </div>
@@ -91,4 +78,4 @@ class InlineExample2 extends React.Component {
     )
   }
 }
-export default InlineExample2
+export default InlineExample3

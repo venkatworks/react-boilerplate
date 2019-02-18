@@ -25,7 +25,7 @@ class InlineExample1 extends React.Component {
       this.setState({
         childHeight: this.state.childHeight + 1
       })
-    }, 300)
+    }, 100)
   }
   componentWillUnmount = () => {
     clearInterval(this.intervalHandler)
@@ -37,23 +37,28 @@ class InlineExample1 extends React.Component {
         <div className="example-space">
           <div className="inline d1">inline 1</div>
           <div className="inline d1" />
-          <div className="inline d1" />
           <div className="inline d1">
-            child inline-block element expanding height with out text
+            child inline-block element expanding height with text
             <VerticallyExpadingInlineBlockChild
               childHeight={childHeight}
               className="inline-block child-of-inline"
-            />
+            >
+              <b>inline block</b>
+            </VerticallyExpadingInlineBlockChild>
           </div>
+          <div className="inline d1" />
           <ol>
             <li>
-              if the children element of the inline element has no text then the
-              bottom of the child element will be aligned with the parent
-              element text. parent inline element
+              The children elements position start from the bottom of text of
+              parent inline element
             </li>
             <li>
               you can observe that parent's Inline content height is not
               effected by its children
+            </li>
+            <li>
+              Inline element's vertical padding can be rendered based on its
+              children height and width
             </li>
             <li>
               {' '}

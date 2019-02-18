@@ -16,9 +16,17 @@
   }
 }
 .example-space {
-  margin-top: 10vh;
+  display: block;
+  position: relative;
+  margin-bottom: 10vh;
   height: 50vh;
-  width: 100vw;
+  width: 94vw;
+  border: 3vw solid #ccc;
+  ol {
+    position: absolute;
+    bottom: 0;
+    padding-left: 1.5rem;
+  }
 }
 .inline-block {
   display: inline-block;
