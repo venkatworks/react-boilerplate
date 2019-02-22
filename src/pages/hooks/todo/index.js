@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const EditableTask = ({ task, saveTask, editTask }) => {
   const [value, setValue] = useState(task.value)
@@ -63,13 +63,24 @@ const Todo = ({
   )
 }
 
+const useThrottle = (callback, interval) => {
+  useEffect(() => {
+    var handler = setInterval(() => {
+      callback()
+    }, interval)
+    return () => {
+      console.log('clearing interval')
+      clearInterval(handler)
+    }
+  })
+}
+
 const state = () => {
-  const [tasks, setTasks] = useState([
-    { value: 'shopping', id: 0, completed: false },
-    { value: 'assignment 1', id: 1, completed: true }
-  ])
+  const [tasks, setTasks] = useState(() =>
+    JSON.parse(localStorage.getItem('TASKS') || '[]')
+  )
   const [newTask, setNewTask] = useState('')
-  const [id, setId] = useState(1)
+  const [id, setId] = useState(() => parseInt(localStorage.getItem('ID') || 1))
 
   const incrementId = () => {
     setId(id + 1)
@@ -89,10 +100,18 @@ const state = () => {
   const removeTask = id => {
     setTasks(tasks.filter(task => task.id !== id))
   }
+
   const completedTask = updateTask(task => ({ ...task, completed: true }))
   const moveToTodoList = updateTask(task => ({ ...task, completed: false }))
   const saveTask = (id, text) =>
     updateTask(task => ({ ...task, value: text }))(id)
+
+  const saveSelectedState = () => {
+    localStorage.setItem('TASKS', JSON.stringify(tasks))
+    localStorage.setItem('ID', JSON.stringify(id))
+  }
+
+  useThrottle(saveSelectedState, 2000)
 
   return {
     tasks,
