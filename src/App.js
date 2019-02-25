@@ -13,6 +13,8 @@ import BlockPage from './pages/html-css/block/index'
 import FlexPage from './pages/html-css/flex/index'
 import GridPage from './pages//html-css/grid/index'
 import TodoPage from './pages/hooks/todo/index'
+import TodoReducerPage from './pages/hooks/todo_reducer/index'
+import TodoReducerRefPage from './pages/hooks/todo_reducer_ref/index'
 import DashboardPage from './pages/dashboard/index'
 import NotFoundPage from './pages/not-found/index'
 import { createBrowserHistory } from 'history'
@@ -38,7 +40,8 @@ class App extends React.Component {
             <Route path="/flex" component={FlexPage} />
             <Route path="/grid" component={GridPage} />
             <Route path="/todo" component={TodoPage} />
-
+            <Route path="/todoReducer" component={TodoReducerPage} />
+            <Route path="/todoReducerRef" component={TodoReducerRefPage} />
             <Route path="/hoc" component={HocPage} />
             <Route path="/index.html" component={LoginPage} />
           </div>

@@ -1,0 +1,19 @@
+.task-completed .task-name {
+  text-decoration: line-through;
+}
+.edit-task {
+  .edit-text {
+    display: block;
+  }
+  .task-name {
+    display: none;
+  }
+}
+.show-task {
+  .edit-text {
+    display: none;
+  }
+  .task-name {
+    display: block;
+  }
+}
